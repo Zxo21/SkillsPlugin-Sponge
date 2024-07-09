@@ -12,7 +12,6 @@ import org.spongepowered.api.config.ConfigDir;
 import org.spongepowered.api.config.DefaultConfig;
 import org.spongepowered.api.event.Listener;
 import org.spongepowered.api.event.game.state.GameInitializationEvent;
-import org.spongepowered.api.event.game.state.GamePostInitializationEvent;
 import org.spongepowered.api.event.game.state.GamePreInitializationEvent;
 import org.spongepowered.api.event.game.state.GameStartedServerEvent;
 import org.spongepowered.api.event.network.ClientConnectionEvent;
@@ -73,11 +72,6 @@ public class Main {
     public void init(GameInitializationEvent e){
         createAndRegisterCommands();
         game.getEventManager().registerListeners(this, skillManager);
-    }
-
-    @Listener
-    public void postInit(GamePostInitializationEvent e){
-
     }
 
     @Listener
