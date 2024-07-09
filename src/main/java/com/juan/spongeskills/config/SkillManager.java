@@ -76,12 +76,9 @@ public class SkillManager {
                                 TextColors.YELLOW, skillName,
                                 TextColors.DARK_GREEN, "."));
 
-                ParticleEffect effect = ParticleEffect.builder()
-                        .type(ParticleTypes.FIREWORKS_SPARK)
-                        .build();
+                ParticleEffect effect = ParticleEffect.builder().type(ParticleTypes.FIREWORKS_SPARK).build();
 
                 player.spawnParticles(effect, player.getLocation().getPosition().add(0, 2, 0));
-
                 player.playSound(SoundTypes.ENTITY_PLAYER_LEVELUP, player.getLocation().getPosition(), 1);
             }
         }
