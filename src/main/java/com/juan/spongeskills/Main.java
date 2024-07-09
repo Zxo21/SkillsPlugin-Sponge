@@ -66,7 +66,10 @@ public class Main {
     }
 
     @Listener
-    public void onServerStart(GameStartedServerEvent event) { logger.info( "Sponge Skills Plugin has been started");}
+    public void onServerStart(GameStartedServerEvent event) { logger.info( "Skills-Plugin has been started");}
+
+    @Listener
+    public void onServerStop(GameStoppedServerEvent event) { logger.info ("Skills-Plugin has been stopped");}
 
     @Listener
     public void init(GameInitializationEvent e){
